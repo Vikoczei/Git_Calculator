@@ -18,16 +18,19 @@ namespace Git_Calculator
 
             int sum = 0;
             int kulonbseg = 0;
+            int szorzat = 1;
 
             for (int i = 0; i < N; i++)
             {
                 szamtomb[i] = int.Parse(Console.ReadLine());
                 sum += szamtomb[i];
                 kulonbseg -= szamtomb[i];
+                kulonbseg *= szamtomb[i];
             }
 
             Console.WriteLine("A számok összege "+sum+"");
             Console.WriteLine($" A számok különbsége: {kulonbseg}");
+            Console.WriteLine("A számok szorzata: "+szorzat+"");
         }
     }
 }
